@@ -27,6 +27,22 @@ describe("howLongLeft", function () {
         date.setHours(20, 0, 0);
         var message = howLongLeft.howLongLeft("18:00", date);
 
-        expect(message).to.be.equal("It's time to go home!");
+        expect(message).to.be.equal("It's time to go home");
+    });
+
+    it("Should return that we have x minutes left", function() {
+        var date = new Date();
+        date.setHours(17, 30, 0);
+        var message = howLongLeft.howLongLeft("18:00", date);
+
+        expect(message).to.be.equal("You have 30 minutes left.");
+    });
+
+    it("Should return that we have x hours and x minutes left", function() {
+        var date = new Date();
+        date.setHours(16, 30, 0);
+        var message = howLongLeft.howLongLeft("18:00", date);
+
+        expect(message).to.be.equal("You have 1 hours and 30 minutes left.");
     });
 });

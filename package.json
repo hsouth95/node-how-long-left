@@ -9,7 +9,8 @@
   "author": "Harrison South",
   "license": "ISC",
   "dependencies": {
-    "home-config": "^0.1.0"
+    "home-config": "^0.1.0",
+    "moment": "^2.22.2"
   },
   "devDependencies": {
     "chai": "^4.2.0",
