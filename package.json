@@ -1,0 +1,18 @@
+{
+  "name": "howlongleft",
+  "version": "1.0.0",
+  "description": "Show much longer you have until the end of the work-day",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Harrison South",
+  "license": "ISC",
+  "dependencies": {
+    "home-config": "^0.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
