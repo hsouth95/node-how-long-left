@@ -1,12 +1,35 @@
+#!/usr/bin/env node
+
+var program = require('commander');
 var cfg = require('home-config').load('.howlongleft');
 var readline = require('readline');
 var moment = require('moment');
 
-// Check the config file - target should be a timestamp (HH:mm)
-if(!cfg.target) {
-    runSetup(cfg);
-} else {
-    console.log(howLongLeft(cfg.target,moment()));
+program
+    .description("Find out how long until the end of your work day")
+    .usage("[command] [options]");
+
+program
+    .command("update <time>")
+    .description("Update the timestamp (HH:mm) being used to track the end of your work day")
+    .action(function(time) {
+        if(isValidTime(time)) {
+            cfg.target = time;
+            cfg.save();
+            console.log("Timestamp has been updated");
+        }
+    });
+
+program.parse(process.argv);
+
+// If no commands given, run the program
+if(program.args.length === 0) {
+    // Check the config file - target should be a timestamp (HH:mm)
+    if(!cfg.target) {
+        runSetup(cfg);
+    } else {
+        console.log(howLongLeft(cfg.target,moment()));
+    }
 }
 
 function runSetup(cfg) {

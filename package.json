@@ -8,7 +8,11 @@
   },
   "author": "Harrison South",
   "license": "ISC",
+  "bin": {
+    "howlongleft": "./index.js"
+  },
   "dependencies": {
+    "commander": "^2.19.0",
     "home-config": "^0.1.0",
     "moment": "^2.22.2"
   },
