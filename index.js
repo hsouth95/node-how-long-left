@@ -54,7 +54,7 @@ function runSetup(cfg) {
 }
 
 function isValidTime(time) {
-    const timeRegex = /([01]\d|2[0-3]):[0-5]\d/
+    const timeRegex = /([01]\d|2[0-3]):[0-5]\d/;
 
     return timeRegex.test(time);
 }
@@ -92,4 +92,4 @@ function howLongLeft(time, currentTime) {
 module.exports = {
     isValidTime: isValidTime,
     howLongLeft: howLongLeft
-}
+};

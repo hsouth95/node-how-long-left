@@ -8,6 +8,8 @@
   },
   "author": "Harrison South",
   "license": "ISC",
+  "homepage": "https://github.com/hsouth95/node-how-long-left",
+  "repository": "github:hsouth95/node-how-long-left",
   "bin": {
     "howlongleft": "./index.js"
   },
