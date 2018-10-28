@@ -1,6 +1,6 @@
 {
   "name": "howlongleft",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Show much longer you have until the end of the work-day",
   "main": "index.js",
   "scripts": {
